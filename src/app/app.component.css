@@ -1,0 +1,41 @@
+.side-nav-container {
+    height: 100vh;
+}
+
+.sidenav {
+    width: 220px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        width: 200px;
+    }
+
+    .hide-desktop {
+        display: inline-flex;
+    }
+
+    mat-sidenav {
+        mode: over;
+    }
+}
