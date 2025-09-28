@@ -3,7 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master
 
 permissions:
   contents: write   # 👈 needed so the action can push to gh-pages
