@@ -1,2 +1,120 @@
-<h2>About Me</h2>
-<p>I’m a Frontend Developer with X years of experience in Angular, HTML, CSS, and JavaScript.</p>
+<div class="about-container">
+    <div class="about-header">
+        <h1>About Me</h1>
+        <p>
+            Get to know more about my journey, passion for frontend development,
+            and what drives me to create exceptional web experiences.
+        </p>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-container">
+            <div class="profile-image-wrapper">
+                <img src="assets/images/profile-picture.jpg" alt="Harshatha - Frontend Developer" class="profile-image"
+                    (error)="onImageError($event)" (load)="onImageLoad($event)">
+            </div>
+            <div class="profile-content">
+                <h3>Who I Am</h3>
+                <p>
+                    Passionate frontend developer with a keen eye for detail and a love for creating seamless user
+                    experiences.
+                    I specialize in Angular development and enjoy turning complex problems into simple, beautiful
+                    solutions.
+                </p>
+                <p>
+                    With a strong foundation in modern web technologies, I focus on building applications that are not
+                    only
+                    visually appealing but also performant, accessible, and user-friendly. I believe in writing clean,
+                    maintainable code and staying up-to-date with the latest industry trends and best practices.
+                </p>
+
+                <div class="profile-highlights">
+                    <div class="highlight-item">
+                        <mat-icon>work</mat-icon>
+                        <span>3+ Years Experience</span>
+                    </div>
+                    <div class="highlight-item">
+                        <mat-icon>code</mat-icon>
+                        <span>20+ Projects Completed</span>
+                    </div>
+                    <div class="highlight-item">
+                        <mat-icon>emoji_events</mat-icon>
+                        <span>Always Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-section">
+        <h3>My Journey</h3>
+        <div class="journey-content">
+            <div class="journey-item">
+                <div class="journey-icon">
+                    <mat-icon>school</mat-icon>
+                </div>
+                <div class="journey-text">
+                    <h4>Education & Foundation</h4>
+                    <p>
+                        Started my journey in web development with a strong foundation in computer science principles
+                        and modern web technologies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-icon">
+                    <mat-icon>code</mat-icon>
+                </div>
+                <div class="journey-text">
+                    <h4>Professional Development</h4>
+                    <p>
+                        Gained hands-on experience working on diverse projects, from small business websites
+                        to complex enterprise applications.
+                    </p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-icon">
+                    <mat-icon>trending_up</mat-icon>
+                </div>
+                <div class="journey-text">
+                    <h4>Continuous Growth</h4>
+                    <p>
+                        Constantly expanding my skillset and staying current with emerging technologies
+                        and industry best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="values-section">
+        <h3>What I Value</h3>
+        <div class="values-grid">
+            <div class="value-card">
+                <mat-icon>speed</mat-icon>
+                <h4>Performance</h4>
+                <p>Creating fast, optimized applications that provide excellent user experiences.</p>
+            </div>
+
+            <div class="value-card">
+                <mat-icon>accessibility</mat-icon>
+                <h4>Accessibility</h4>
+                <p>Building inclusive applications that work for everyone, regardless of abilities.</p>
+            </div>
+
+            <div class="value-card">
+                <mat-icon>clean_hands</mat-icon>
+                <h4>Clean Code</h4>
+                <p>Writing maintainable, scalable code that follows industry best practices.</p>
+            </div>
+
+            <div class="value-card">
+                <mat-icon>group</mat-icon>
+                <h4>Collaboration</h4>
+                <p>Working effectively with teams and stakeholders to deliver successful projects.</p>
+            </div>
+        </div>
+    </div>

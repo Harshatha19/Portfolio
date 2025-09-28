@@ -1,6 +1,105 @@
-<h2>My Projects</h2>
-<div *ngFor="let project of projects">
-  <h3>{{ project.title }}</h3>
-  <p>{{ project.description }}</p>
-  <a [href]="project.link" target="_blank">View Code</a>
+<div class="projects-container">
+  <div class="projects-header">
+    <h1>My Projects</h1>
+    <p>
+      Explore a selection of my work showcasing modern web development practices,
+      user-centered design, and technical excellence across various domains.
+    </p>
+  </div>
+
+  <div class="projects-filter">
+    <button mat-raised-button [color]="selectedCategory === 'all' ? 'primary' : 'basic'"
+      (click)="filterProjects('all')">
+      All Projects
+    </button>
+    <button mat-raised-button [color]="selectedCategory === 'angular' ? 'primary' : 'basic'"
+      (click)="filterProjects('angular')">
+      Angular
+    </button>
+    <button mat-raised-button [color]="selectedCategory === 'web' ? 'primary' : 'basic'"
+      (click)="filterProjects('web')">
+      Web Development
+    </button>
+    <button mat-raised-button [color]="selectedCategory === 'full' ? 'primary' : 'basic'"
+      (click)="filterProjects('full')">
+      Full Stack
+    </button>
+  </div>
+
+  <div class="projects-grid">
+    <mat-card *ngFor="let project of filteredProjects" class="project-card mat-elevation-z4">
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title" (error)="onImageError($event)" />
+        <div class="project-overlay">
+          <div class="project-links">
+            <a mat-icon-button [href]="project.liveLink" target="_blank" *ngIf="project.liveLink">
+              <mat-icon>launch</mat-icon>
+            </a>
+            <a mat-icon-button [href]="project.githubLink" target="_blank" *ngIf="project.githubLink">
+              <mat-icon>code</mat-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <mat-card-content class="project-content">
+        <div class="project-header">
+          <h3>{{ project.title }}</h3>
+          <div class="project-category">{{ project.category }}</div>
+        </div>
+
+        <p class="project-description">{{ project.description }}</p>
+
+        <div class="project-tech">
+          <span class="tech-tag" *ngFor="let tech of project.technologies">
+            {{ tech }}
+          </span>
+        </div>
+
+        <div class="project-features">
+          <h4>Key Features:</h4>
+          <ul>
+            <li *ngFor="let feature of project.features">{{ feature }}</li>
+          </ul>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="project-actions">
+        <a mat-button color="primary" [href]="project.liveLink" target="_blank" *ngIf="project.liveLink">
+          <mat-icon>launch</mat-icon>
+          Live Demo
+        </a>
+        <a mat-stroked-button [href]="project.githubLink" target="_blank" *ngIf="project.githubLink">
+          <mat-icon>code</mat-icon>
+          View Code
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="projects-stats">
+    <div class="stat-card">
+      <mat-icon>code</mat-icon>
+      <h3>20+</h3>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-card">
+      <mat-icon>language</mat-icon>
+      <h3>{{ getTechnologiesCount() }}</h3>
+      <p>Technologies Used</p>
+    </div>
+
+    <div class="stat-card">
+      <mat-icon>schedule</mat-icon>
+      <h3>1000+</h3>
+      <p>Hours of Development</p>
+    </div>
+
+    <div class="stat-card">
+      <mat-icon>star</mat-icon>
+      <h3>100%</h3>
+      <p>Client Satisfaction</p>
+    </div>
+  </div>
 </div>

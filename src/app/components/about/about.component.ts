@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  onImageError(event: any) {
+    console.log('Profile image failed to load:', event.target.src);
+    // Keep the placeholder circle if image fails
+  }
+
+  onImageLoad(event: any) {
+    console.log('Profile image loaded successfully:', event.target.src);
+  }
 }
