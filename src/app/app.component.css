@@ -1,23 +1,20 @@
 .sidenav-container {
     height: 100vh;
-    display: flex;
 }
 
 .sidenav {
-    width: 220px;
-    height: 100%;
-    overflow-y: auto;
+    width: 280px;
     background-color: #2a2a2a;
 }
 
 mat-toolbar {
     position: sticky;
     top: 0;
-    z-index: 1
+    z-index: 1000;
 }
 
 .content {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -25,47 +22,17 @@ mat-toolbar {
 .main-content {
     flex: 1;
     overflow-y: auto;
-    padding: 1rem;
+    padding: 0;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .sidenav {
-        width: 280px;
-        position: fixed;
-        z-index: 1000;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .hide-desktop {
-        display: inline-flex;
+        width: 100%;
+        max-width: 280px;
     }
 
     .main-content {
-        padding: 0.5rem;
-        width: 100%;
-    }
-
-    .sidenav-container {
-        height: 100vh;
-        position: relative;
-    }
-
-    /* Hide menu button on desktop */
-    .hide-desktop {
-        display: none;
-    }
-}
-
-/* Show menu button only on mobile */
-@media (min-width: 769px) {
-    .hide-desktop {
-        display: none;
-    }
-}
-
-/* Mobile specific */
-@media (max-width: 768px) {
-    .hide-desktop {
-        display: inline-flex !important;
+        padding: 0;
     }
 }
