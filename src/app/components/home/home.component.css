@@ -12,12 +12,21 @@
     justify-content: center;
     text-align: center;
     background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+    padding: 1rem;
 
     h1 {
         font-size: 4.5rem;
         margin-bottom: 1.5rem;
         color: #ffffff;
         font-weight: 700;
+
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 2rem;
+        }
     }
 
     h2 {
@@ -25,6 +34,14 @@
         font-weight: 400;
         margin-bottom: 2rem;
         color: #bbbbbb;
+
+        @media (max-width: 768px) {
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1.2rem;
+        }
     }
 
     p {
@@ -33,6 +50,12 @@
         color: #dddddd;
         max-width: 600px;
         line-height: 1.6;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            max-width: 90%;
+            padding: 0 1rem;
+        }
     }
 
     .hero-buttons {
@@ -46,6 +69,31 @@
             font-weight: 500;
             min-width: 160px;
             height: 48px;
+
+            @media (max-width: 768px) {
+                margin: 0.5rem;
+                padding: 10px 24px;
+                font-size: 1rem;
+                min-width: 140px;
+                height: 44px;
+            }
+
+            @media (max-width: 480px) {
+                margin: 0.3rem;
+                padding: 8px 20px;
+                font-size: 0.9rem;
+                min-width: 120px;
+                height: 40px;
+                display: block;
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
         }
     }
 }
